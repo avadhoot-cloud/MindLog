@@ -1,0 +1,31 @@
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav-arrow {
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-arrow:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-arrow {
+    margin-right: auto;
+  }
+  
+  .forward-arrow {
+    margin-left: auto;
+  }
+  
