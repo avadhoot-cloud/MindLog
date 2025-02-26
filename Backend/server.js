@@ -9,7 +9,9 @@ const todoRoutes = require('./routes/todoRoutes');
 const friendRoutes = require('./routes/friendRoutes');
 const fantasiesRoutes = require('./routes/fantasiesRoutes.js');
 const diaryRoutes = require('./routes/DiaryRoutes');
-
+const quotesRoutes = require('./routes/quotesRoutes');
+const moviesRoute = require('./routes/moviesRoute');
+const passwordsRoutes = require('./routes/passwordsRoutes');
 const app = express();
 
 // CORS configuration
@@ -29,6 +31,9 @@ app.use('/api/todo', todoRoutes);
 app.use('/api/friends', friendRoutes);
 app.use('/api/fantasies', fantasiesRoutes);
 app.use('/api/diary', diaryRoutes);
+app.use('/api/quotes', quotesRoutes);
+app.use('/api/movies', moviesRoute);
+app.use('/api/passwords', passwordsRoutes);
 
 
 // Server

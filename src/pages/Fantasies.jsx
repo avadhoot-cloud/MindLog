@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { FaTrash } from "react-icons/fa"; // Import trash icon
 
 const Fantasies = () => {
   const [fantasies, setFantasies] = useState([]);
@@ -37,6 +38,22 @@ const Fantasies = () => {
     }
   };
 
+  // Delete a fantasy
+  const deleteFantasy = async (id) => {
+    setLoading(true);
+    try {
+      console.log(`Deleting fantasy with ID: ${id}`); // Debugging
+      const response = await axios.delete(`http://localhost:5000/api/fantasies/${id}`);
+      console.log('Delete response:', response.data); // Debugging
+      setFantasies(fantasies.filter((fantasy) => fantasy.id !== id)); // Remove from UI
+    } catch (err) {
+      console.error('Delete error:', err); // Debugging
+      setError("Failed to delete fantasy. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Fetch fantasies on component mount
   useEffect(() => {
     fetchFantasies();
@@ -58,9 +75,15 @@ const Fantasies = () => {
           {fantasies.map((fantasy) => (
             <div
               key={fantasy.id}
-              className="p-4 bg-gray-100 rounded-lg shadow-sm hover:bg-gray-200 transition duration-200"
+              className="p-4 bg-gray-100 rounded-lg shadow-sm hover:bg-gray-200 transition duration-200 flex justify-between items-center"
             >
               <p className="text-gray-700">{fantasy.fantasy}</p>
+              <button
+                onClick={() => deleteFantasy(fantasy.id)}
+                className="text-red-500 hover:text-red-700 transition duration-200"
+              >
+                <FaTrash />
+              </button>
             </div>
           ))}
         </div>

@@ -31,3 +31,18 @@ exports.addFantasy = async (req, res) => {
     res.status(500).json({ message: 'Error adding fantasy', error: err });
   }
 };
+
+// Delete a fantasy
+exports.deleteFantasy = async (req, res) => {
+  const { id } = req.params;
+  console.log(`Deleting fantasy with ID: ${id}`); // Debugging
+  const query = 'DELETE FROM fantasies WHERE id = ?';
+  try {
+    await db.promise().query(query, [id]);
+    console.log('Fantasy deleted successfully'); // Debugging
+    res.status(200).json({ message: 'Fantasy deleted successfully' });
+  } catch (err) {
+    console.error('Error deleting fantasy:', err); // Debugging
+    res.status(500).json({ message: 'Error deleting fantasy', error: err });
+  }
+};

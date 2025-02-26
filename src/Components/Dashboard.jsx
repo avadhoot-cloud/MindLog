@@ -4,11 +4,6 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    localStorage.removeItem('token'); // Clear token from local storage
-    navigate('/'); // Redirect to Home
-  };
-
   const menuItems = [
     { name: 'Todo', path: '/dashboard/todo' },
     { name: 'Bucket List', path: '/dashboard/bucket-list' },
@@ -49,14 +44,6 @@ const Dashboard = () => {
             </NavLink>
           ))}
         </nav>
-
-        {/* Logout Button */}
-        <button
-          className="w-full p-4 text-center bg-red-600 hover:bg-red-700 font-semibold transition-colors"
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
       </aside>
 
       {/* Main Content */}
