@@ -10,13 +10,11 @@ const Dashboard = () => {
     { name: 'Diary', path: '/dashboard/diary' },
     { name: 'Friends & Crushes', path: '/dashboard/friends-crushes' },
     { name: 'Fantasies', path: '/dashboard/fantasies' },
-    { name: 'Ideas', path: '/dashboard/ideas' },
-    { name: 'Long-term Goals', path: '/dashboard/long-term-goals' },
     { name: 'Motivational Quotes', path: '/dashboard/motivational-quotes' },
     { name: 'Skills', path: '/dashboard/skills' },
     { name: 'Movies List', path: '/dashboard/movies' },
     { name: 'Passwords', path: '/dashboard/passwords' },
-    { name: 'Add List', path: '/dashboard/add-lists' },
+    { name: 'Cybernotes', path: '/dashboard/cybernotes' },
   ];
 
   return (

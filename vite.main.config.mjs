@@ -1,7 +1,20 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  build: {
+    minify: false,
+    target: 'node18',
+    outDir: '.vite/build',
+    lib: {
+      entry: 'src/main.js',
+      formats: ['cjs']
+    },
+    rollupOptions: {
+      external: ['electron', 'path', 'child_process'],
+      output: {
+        entryFileNames: '[name].js',
+        format: 'cjs'
+      }
+    }
+  }
 });

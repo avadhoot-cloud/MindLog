@@ -17,6 +17,7 @@ import Long_term_goals from './pages/Long_term_goals';
 import Motivational_quotes from './pages/Motivational_quotes';
 import Skills from './pages/Skills';
 import Friends_and_Crushes from './pages/Friends_and_Crushes';
+import Cybernotes from './pages/Cybernotes';
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="motivational-quotes" element={<Motivational_quotes />} />
             <Route path="skills" element={<Skills />} />
             <Route path="friends-crushes" element={<Friends_and_Crushes />} />
+            <Route path="cybernotes" element={<Cybernotes />} />
           </Route>
         </Routes>
       </div>

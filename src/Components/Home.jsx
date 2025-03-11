@@ -34,12 +34,6 @@ const Home = () => {
         >
           Login
         </button>
-        <button
-          onClick={handleSignupClick}
-          className="px-6 py-3 text-white bg-green-600 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105"
-        >
-          Signup
-        </button>
       </div>
     </div>
   );

@@ -1,0 +1,118 @@
+/* CyberNotes.css */
+.cybernotes-container {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .cybernotes-header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .cybernotes-header h1 {
+    margin: 0 0 10px;
+  }
+  
+  .section-tabs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .section-tabs li {
+    margin-right: 15px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .section-tabs li.active,
+  .section-tabs li:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  
+  .cybernotes-main {
+    padding: 20px;
+  }
+  
+  .note-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="file"] {
+    margin-top: 5px;
+  }
+  
+  .submit-btn {
+    background: #2575fc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #6a11cb;
+  }
+  
+  .notes-list {
+    margin-top: 30px;
+  }
+  
+  .note-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .note-card h3 {
+    margin-top: 0;
+  }
+  
+  .note-file img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .timestamp {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 10px;
+  }
+  
